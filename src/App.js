@@ -1,12 +1,14 @@
 import './App.css';
-import Expenses from './compoenents/Expenses';
+import Expenses from './compoenents/Expenses/Expense'
+import NewExpense from './compoenents/NewExpense/NewExpense';
+
 
 
 
 function App() {
   return(
 <div className='App'>
-  <h1>React App Dev</h1>
+  <NewExpense/>
   <Expenses items ={Expenses}/>
 </div>
   );

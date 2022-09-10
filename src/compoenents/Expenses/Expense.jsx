@@ -1,6 +1,6 @@
 import React from 'react'
 import ExpensItems from './ExpensItems';
-import '../App.css';
+import './Expenses.css';
 import Card from './Card';
 
 
@@ -27,10 +27,13 @@ const expenses = [
     },
 ];
 
+// function printstuff(){expenses.map((array) => return array;)}
+
+
 export default function Expenses() {
       return (
     <Card className=" expenses ">
-      <ExpensItems
+            <ExpensItems
         title= {expenses[0].title}
         amount= {expenses[0].amount}
         date= {expenses[0].date}/>
