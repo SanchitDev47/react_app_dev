@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './Expenses.css';
 import ExpensDate from './ExpensDate'
 import Card from './Card';

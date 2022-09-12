@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './NewExpenses.css'
 
-export default function ExpenseFrom() {
+export default function ExpenseFrom(props) {
     const [ enteredTitle , setEnteredTitle] = useState('');
     const [ enteredAmount , setEnteredAmount] = useState('');
     const [ enteredDate , setEnteredDate] = useState('');
@@ -37,16 +37,20 @@ export default function ExpenseFrom() {
 
   const submitHandler = (event) =>{
     event.preventDefault();
-        const expenseDate = {
+
+        const expenseData = {
         title: enteredTitle,
         amount: enteredAmount,
-        date: new Date(enteredDate),
-        }
-    console.log(expenseDate);
-    enteredTitle('');
-    enteredAmount('');
-    enteredDate('');
-    
+        date: new Date(enteredDate),        
+        };
+        setEnteredTitle('');
+        setEnteredDate('');
+        setEnteredAmount('');
+        props.onSaveExpenseData(expenseData);
+        // enteredTitle('');
+        // enteredAmount('');
+        // enteredDate('');
+        
   }   
   return (
         <form onSubmit={submitHandler}>
