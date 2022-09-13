@@ -5,6 +5,10 @@ export default function ExpensesFilter(props) {
       props.onChangeFilter(event.target.value)
       console.log('Expense.jsx');
   }
+  // function showMeAllExpenses(event){
+  //   props.allExpenses(event.target.value);
+  //   console.log('get clicked')
+  // }
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
@@ -14,8 +18,9 @@ export default function ExpensesFilter(props) {
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>
           <option value='2019'>2019</option>
+          <option value='1998'>1998</option>
         </select>
       </div>
     </div>
-  );
-};
+  )
+  }

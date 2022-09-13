@@ -1,16 +1,19 @@
 import React from 'react'
+import './chart.css';
 
 export default function Chartbar(props) {
   let barFillHeight = '0%';
-  if(props.max >0){
-    barFillHeight = Math.round((props.value/ props.maxValue * 100) + '%')
+  if(props.maxValue > 0){
+    barFillHeight = Math.round((props.value / props.maxValue) * 100) + '%';
   }
   return (
 <div className='chart-bar'>
-  <div className='chart-bar_inner'>{}</div>
-    <div className='chart-bar_fill' style={{height: barFillHeight,backgroundColor:'red'}}>
+  <div className='chart-bar__inner'>
+    <div className='chart-bar__fill' 
+    style={{height: barFillHeight}}>
+    </div>
   </div>
-  <div className='chart-bar_label'>{props.lable}</div>
+  <div className='chart-bar__label'>{props.label}</div>
   </div>
 
   );
