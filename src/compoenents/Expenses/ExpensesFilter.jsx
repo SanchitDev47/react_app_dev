@@ -2,29 +2,12 @@
 
 
 // export default function ExpensesFilter(props) {
-//   // let select = props.value.all;
 //     function dropDownChangeHandler(event){
-//           if(select === true){
-//           props.allExpensesSelected(event.target.value)
-//           }
 //       props.onChangeFilter(event.target.value)
 //       console.log('Expense.jsx');
 
 
 //   }
-  
-  
-  
-//   // function showAllExpenses(event){
-//   //   props.onSelectedAll(event.target.value);
-//   //   console.log('get clicked')
-//   // }
-  
-//   // const [expenses ,setExpenses] =  useState('all');
-
-
-
-
 //   return (
 //     <div className='expenses-filter'>
 //       <div className='expenses-filter__control'>
