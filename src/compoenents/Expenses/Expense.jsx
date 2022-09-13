@@ -4,15 +4,28 @@ import Card from './Card';
 import ExpensesFilter from './ExpensesFilter';
 import ExpensesList from './ExpensesList';
 import ExpensesChart from './ExpensesChart';
+import ExpensesAll from './ExpensesAll';
+
 
 
 export default function Expense(props) {
   const [filteredYear, setFilteredYear] = useState('2022');
-  // const [expenses ,setExpenses] =  useState('all expenses')
 
-  // const showExpensesHandler = expensesSelected => {
-  //   console.log(items.title)
-  // }
+
+
+  // const [expenses ,setExpenses] =  useState('all')
+
+  // const showAllExpenseHandler = selectedAll => {
+  //   console.log(selectedAll);
+  //   setExpenses(selectedAll);
+  //     }
+  //     const showAllExpense = props.items.map(expenses => {
+  //     return expenses.items
+  //   });
+
+
+
+
   const filterChangeHandler = selectedYear => {
     console.log(selectedYear);
         setFilteredYear(selectedYear);
@@ -23,9 +36,17 @@ export default function Expense(props) {
       return (
         <li>
         <Card className='expenses'>
+
+
+
+            {/* <ExpensesAll 
+            showAllExpense={showAllExpenseHandler}
+            onSelectedAll={showAllExpenseHandler}  
+            /> */}
+
+
             <ExpensesFilter
             selected={filteredYear} 
-            // selected={showExpensesHandler}
             onChangeFilter={filterChangeHandler}
             />
             <ExpensesChart expenses={filteredExpenses}/>

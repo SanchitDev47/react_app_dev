@@ -1,0 +1,2 @@
+//if option "all" selected that time the all expenses should be printed dynamically
+//the funcation can call all the expenses item where existed 

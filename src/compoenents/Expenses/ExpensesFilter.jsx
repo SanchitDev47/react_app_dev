@@ -1,19 +1,31 @@
 import React from 'react';
+import ExpensItems from './ExpensItems';
+
 
 export default function ExpensesFilter(props) {
     function dropDownChangeHandler(event){
       props.onChangeFilter(event.target.value)
       console.log('Expense.jsx');
   }
-  // function showMeAllExpenses(event){
-  //   props.allExpenses(event.target.value);
+  
+  
+  
+  // function showAllExpenses(event){
+  //   props.onSelectedAll(event.target.value);
   //   console.log('get clicked')
   // }
+  
+  // const [expenses ,setExpenses] =  useState('all');
+
+
+
+
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
         <label>Filter by year</label>
         <select onChange={dropDownChangeHandler}>
+          <option value='all' onSelected={()=> console.log('get selected')}>All</option>
           <option value='2022'>2022</option>
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>
@@ -24,3 +36,4 @@ export default function ExpensesFilter(props) {
     </div>
   )
   }
+  // onSelect={showAllExpenses}
