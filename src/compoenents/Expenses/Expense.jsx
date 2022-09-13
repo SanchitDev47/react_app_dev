@@ -1,15 +1,17 @@
 import React,{ useState } from 'react';
 import './Expenses.css';
 import Card from './Card';
-import ExpensesFilter from './ExpensesFilter';
+// import ExpensesFilter from './ExpensesFilter';
 import ExpensesList from './ExpensesList';
 import ExpensesChart from './ExpensesChart';
-import ExpensesAll from './ExpensesAll';
+// import ExpensesAll from './ExpensesAll';
 
 
 
 export default function Expense(props) {
-  const [filteredYear, setFilteredYear] = useState('2022');
+  // const [filteredYear, setFilteredYear] = useState('2022');
+  // const [filteredItems, setFilteredItems] = useState(select);
+
 
 
 
@@ -25,33 +27,33 @@ export default function Expense(props) {
 
 
 
-
-  const filterChangeHandler = selectedYear => {
-    console.log(selectedYear);
-        setFilteredYear(selectedYear);
-      }
-      const filteredExpenses = props.items.filter(expenses => {
-      return expenses.date.getFullYear().toString() === filteredYear
-    });
+  // const filterItemsHandler = selectedItems => {
+  //       setFiltered(selectedItems);
+  //     }
+  // const filterChangeHandler = selectedYear => {
+  //   console.log(selectedYear);
+  //       setFilteredItems(selectedYear);
+  //     }
+  //     const filteredExpenses = props.items.filter(expenses => {
+  //     return expenses.date.getFullYear().toString() === filteredYear
+  //   });
       return (
         <li>
         <Card className='expenses'>
-
-
-
             {/* <ExpensesAll 
             showAllExpense={showAllExpenseHandler}
             onSelectedAll={showAllExpenseHandler}  
             /> */}
-
-
-            <ExpensesFilter
+            {/* <ExpensesFilter
             selected={filteredYear} 
+            allExpensesSelected={filterItemsHandler}
             onChangeFilter={filterChangeHandler}
-            />
-            <ExpensesChart expenses={filteredExpenses}/>
-            <ExpensesList items={filteredExpenses} />
+            /> */}
+            <ExpensesChart />
+            <ExpensesList />
     </Card>
     </li>
 );
 }
+
+// expenses={filteredExpenses} items={filteredExpenses} 
