@@ -11,24 +11,24 @@ export default function ExpensesList(props) {
   try {
     return (
         <ul className="expenses-list">
-          {detailsObject.map((items) => (
+          {detailsObject.map((expense) => (
                 <ExpensItems
-                key={items.id}
-                title={items.title}
-                amount={items.amount}
-                date={items.date}
+                key={expense.id}
+                title={expense.title}
+                amount={expense.amount}
+                date={expense.date}
                 />
-              ))}
+                ))}
 
                  {/* <ExpensItems
                 title={props.expense[0].title}
                 date={props.expense[0].date}
                 amount={props.expense[0].amount}
-                /> */}
+              /> */}
             </ul>
   )
-  }
-  catch(e) {
+}
+catch(e) {
     console.log(e)
   }
 }

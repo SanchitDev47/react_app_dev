@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-// import ExpensesList from './compoenents/Expenses/ExpensesList';
 import NewExpense from './compoenents/NewExpense/NewExpense';
 import Expense from './compoenents/Expenses/Expense';
-
 import detailsObject from './detailsObject';
+
+// import detailsObject from './detailsObject';
   
 function App() {
   const [expense, setExpenses] = useState(detailsObject);
@@ -12,12 +12,12 @@ function App() {
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
-    console.log('expensedsd', expense);
+      console.log(expense)
   };
   return(
 <div className='App'>
-  <NewExpense  onAddExpense={addExpenseHandler}/>
-  <Expense items={expense}/>
+  <NewExpense items={expense} onAddExpense={addExpenseHandler} />
+  <Expense items={detailsObject} />
   {/* <ExpensesList items= {expense} /> */}
 </div>
   );
