@@ -1,2 +1,8 @@
-//if option "all" selected that time the all expenses should be printed dynamically
-//the funcation can call all the expenses item where existed 
+The roadMap of Expenses APP
+
+
+index.js -> App.js -> newExpenese.js | -> expensesform.js
+                                        Expenses.js -> ExpensesChart.js -> chart.js -> ChartBar.js
+			            ExpensesList.js -> expensItems.js -> passing data through props.title
+											                                date
+											                                amount

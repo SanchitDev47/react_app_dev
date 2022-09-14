@@ -5,13 +5,13 @@ export default function ExpenseFrom(props) {
     const [ enteredTitle , setEnteredTitle] = useState('');
     const [ enteredAmount , setEnteredAmount] = useState('');
     const [ enteredDate , setEnteredDate] = useState('');
+    // const [isSubmit, notSubmit] = useState(false);
 
     // const [userInput , setUserInput] = useState({ 
     //     enteredTitle: '',
     //     enteredAmount: '',
     //     enteredDate: '',
     // })
-
 
     const titleChangeHandler = (event) => {
     setEnteredTitle ( event.target.value ) ;    
