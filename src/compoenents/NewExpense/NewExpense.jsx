@@ -34,6 +34,7 @@ setEditing(false);
             onSaveExpenseData={saveExpenseDataHandler}
             onCancel={stopEditinghandler}
             />}
+            <Expense/>
     </div>
     )
 }

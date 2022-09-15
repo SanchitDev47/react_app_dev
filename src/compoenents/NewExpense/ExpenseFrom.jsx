@@ -1,22 +1,11 @@
 import React, { useState } from 'react'
 import './NewExpenses.css'
-import NewExpense from './compoenents/NewExpense/NewExpense';
-import detailsObject from './detailsObject';
+// import NewExpense from './compoenents/NewExpense/NewExpense';
 
 export default function ExpenseFrom(props) {
     const [ enteredTitle , setEnteredTitle] = useState('');
     const [ enteredAmount , setEnteredAmount] = useState('');
     const [ enteredDate , setEnteredDate] = useState('');
-    const [expense, setExpenses] = useState(detailsObject);
-      
-    
-    const addExpenseHandler = expense => {
-        setExpenses((prevExpenses) => {
-          return [expense, ...prevExpenses];
-        });
-          console.log(expense)
-      };
-
       
     // const [isSubmit, notSubmit] = useState(false);
 
@@ -94,7 +83,7 @@ export default function ExpenseFrom(props) {
         <button type='button' onClick={props.onCancel}>cancel</button>
         <button type='submit'>Add Expense</button>
     </div>
-    <NewExpense onSaveExpenseData />
+    {/* <NewExpense onSaveExpenseData /> */}
 </div>
 </form>
     )
