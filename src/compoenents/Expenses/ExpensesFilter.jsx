@@ -6,7 +6,6 @@ export default function ExpensesFilter(props) {
       props.onChangeFilter(event.target.value)
       console.log('Expense.jsx');
 
-
   }
   return (
     <div className='expenses-filter'>

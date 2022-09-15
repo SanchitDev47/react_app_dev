@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Expense from './compoenents/Expenses/Expense';
-import ExpenseForm from './compoenents/NewExpense/ExpenseFrom'
+import NewExpense from './compoenents/NewExpense/NewExpense'
 import './App.css';
   
 export default function App() {
@@ -41,8 +41,8 @@ export default function App() {
     };
   return(
 <div className='App'>
-<NewExpense  items={expense} onAddExpense={addExpenseHandler}/>
-<ExpenseForm/>
+<NewExpense onAddExpense={addExpenseHandler}/>
+<Expense  items={expense} />
 </div>
   );
 }

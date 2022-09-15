@@ -8,14 +8,14 @@ export default function ExpensesList(props) {
 
     return (
   <ul className="expenses-list">
-  {props.items.map((expense) => (
+  {props.items.map((expense) => {
                   <ExpensItems
                   key={expense.id}
+                  date={expense.date}
                   title={expense.title}
                   amount={expense.amount}
-                  date={expense.date}
                   />
-              ))}
+              })};
               </ul>
   )
 }
