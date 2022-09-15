@@ -19,7 +19,8 @@ export default function Expense(props) {
       return (
         <li>
         <Card className='expenses'>
-          <ExpensesList items={detailsObject}/>
+          <ExpensesList Items={detailsObject}/>
+          
            {/* <ExpensesFilter
             selected={filteredYear} 
             allExpensesSelected={filterItemsHandler}

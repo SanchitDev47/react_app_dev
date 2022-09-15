@@ -1,4 +1,4 @@
-const detailsObject = [ 
+let detailsObject = [ 
 {
       id:'e1',
       title: 'A Book',

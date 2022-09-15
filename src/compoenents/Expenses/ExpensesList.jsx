@@ -1,7 +1,6 @@
 import React from 'react'
 import ExpensItems from './ExpensItems';
-import detailsObject from '../../detailsObject';
-
+import detailsObject from '../../detailsObject'
 
 export default function ExpensesList(props) {
   // let theItems = props.detailsObject;

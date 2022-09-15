@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
+import Expense from '../Expenses/Expense';
 import ExpenseFrom from './ExpenseFrom'
 import './NewExpenses.css'
+
 
 
 
@@ -11,6 +13,7 @@ const [isEditing , setEditing] = useState(false);
 const startEditingHandler = () => {
   setEditing(true)
 }
+
   const saveExpenseDataHandler = (enteredExpenseData) => {
   const expenseData = {
     ...enteredExpenseData,
@@ -19,6 +22,8 @@ const startEditingHandler = () => {
     props.onAddExpense(expenseData);
     setEditing(true)
 }
+
+
 const stopEditinghandler = () => {
 setEditing(false);
 }
@@ -29,7 +34,6 @@ setEditing(false);
             onSaveExpenseData={saveExpenseDataHandler}
             onCancel={stopEditinghandler}
             />}
-            {/* <ExpenseFrom onSaveExpenseData={saveExpenseDataHandler} /> */}
     </div>
     )
 }
