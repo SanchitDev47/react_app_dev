@@ -1,5 +1,4 @@
-import React,{useState} from 'react'
-import Expense from '../Expenses/Expense';
+import React, { useState } from 'react'
 import ExpenseFrom from './ExpenseFrom'
 import './NewExpenses.css'
 
@@ -9,11 +8,9 @@ import './NewExpenses.css'
 export default function NewExpense(props) {
 const [isEditing , setEditing] = useState(false);
 
-
 const startEditingHandler = () => {
   setEditing(true)
 }
-
   const saveExpenseDataHandler = (enteredExpenseData) => {
   const expenseData = {
     ...enteredExpenseData,
@@ -22,7 +19,6 @@ const startEditingHandler = () => {
     props.onAddExpense(expenseData);
     setEditing(true)
 }
-
 
 const stopEditinghandler = () => {
 setEditing(false);
@@ -34,7 +30,6 @@ setEditing(false);
             onSaveExpenseData={saveExpenseDataHandler}
             onCancel={stopEditinghandler}
             />}
-            <Expense/>
     </div>
     )
 }

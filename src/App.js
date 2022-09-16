@@ -5,7 +5,7 @@ import './App.css';
   
 export default function App() {
 
-  let DUMMEY_EXPENSES = [ 
+  const DUMMEY_EXPENSES = [ 
     {
           id:'e1',
           title: 'A Book',
@@ -32,17 +32,20 @@ export default function App() {
       },
       ];
     
-  const [expense, setExpenses] = useState(DUMMEY_EXPENSES);   
+  const [expenses, setExpenses] = useState(DUMMEY_EXPENSES);   
   const addExpenseHandler = expense => {
       setExpenses((prevExpenses) => {
         return [expense, ...prevExpenses];
       });
         console.log(expense)
     };
+
   return(
 <div className='App'>
 <NewExpense onAddExpense={addExpenseHandler}/>
-<Expense  items={expense} />
+<Expense  items={expenses} /> {/* this items comess from expensesItems ->  ExpensesList -> expense -> app.js */}
+
 </div>
   );
+  
 }

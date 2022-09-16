@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+///this compoenent build filter for expenses app that use for filter item
 export default function ExpensesFilter(props) {
     function dropDownChangeHandler(event){
       props.onChangeFilter(event.target.value)
@@ -11,8 +11,7 @@ export default function ExpensesFilter(props) {
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
         <label>Filter by year</label>
-        <select onChange={dropDownChangeHandler}>
-          <option value='all'>All</option>
+        <select value={props.selected} onChange={dropDownChangeHandler}>
           <option value='2022'>2022</option>
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>
@@ -23,4 +22,3 @@ export default function ExpensesFilter(props) {
     </div>
   )
   }
-  // onSelect={showAllExpenses}

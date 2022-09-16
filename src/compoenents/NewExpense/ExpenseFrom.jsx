@@ -83,7 +83,6 @@ export default function ExpenseFrom(props) {
         <button type='button' onClick={props.onCancel}>cancel</button>
         <button type='submit'>Add Expense</button>
     </div>
-    {/* <NewExpense onSaveExpenseData /> */}
 </div>
 </form>
     )
