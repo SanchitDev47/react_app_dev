@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import ExpenseFrom from './ExpenseFrom'
 import './NewExpenses.css'
 
-
-
-
 export default function NewExpense(props) {
 const [isEditing , setEditing] = useState(false);
 

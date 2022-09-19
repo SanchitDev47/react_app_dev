@@ -6,18 +6,18 @@ import ExpensesList from './ExpensesList';
 import ExpensesChart from './ExpensesChart';
 // 
 export default function Expense(props) {
-   // console.log('data', props.)
   
   const [filteredYear, setFilteredYear] = useState('2022');
 
               const filterChangeHandler = selectedYear => {
               setFilteredYear(selectedYear);
               } /// and this code present selected year items using useState of setFilteredyear
- 
-              const filteredExpenses = props.items.filter(expenses => {
-              return expenses.date.getFullYear().toString() === filteredYear 
-             }); // this props.items use for pass data to app.js and expense.js like this items={filteredExpenses}
 
+              const filteredExpenses = props.items.filter(expenses => {
+                 return expenses.date.getFullYear().toString() === filteredYear 
+               }); // this props.items use for pass data to app.js and expense.js like this items={filteredExpenses}
+               
+               try{
                 return (
                 <li>
                 <Card className='expenses'>
@@ -30,4 +30,7 @@ export default function Expense(props) {
                 </Card>
                 </li>
                 );
+             }catch(e){
+                  console.log(e);
              }
+            }
