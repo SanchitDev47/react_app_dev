@@ -3,7 +3,7 @@ import Expense from './compoenents/Expenses/Expense';
 import NewExpense from './compoenents/NewExpense/NewExpense'
 import './App.css';
   
-export default function App(props) {
+export default function App() {
 
   const DUMMEY_EXPENSES = [ 
     {

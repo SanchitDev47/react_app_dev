@@ -1,36 +1,54 @@
-import React,{ useState } from 'react';
+// import React,{useState} from 'react';
 import './Expenses.css';
 import Card from './Card';
-import ExpensesFilter from './ExpensesFilter';
-import ExpensesList from './ExpensesList';
 import ExpensesChart from './ExpensesChart';
+import ExpensItems from './ExpensItems';
 // 
 export default function Expense(props) {
-  
-  const [filteredYear, setFilteredYear] = useState('2022');
+//   function showExpenseItems(event){
+//     props.onChangeFilter(event.target.value)
+// }   
+  // function filterItemHandler(){
+  // console.log(props.items)
+  // }
+  // const [filteredItem, setFilteredItem] = useState('');
 
-              const filterChangeHandler = selectedYear => {
-              setFilteredYear(selectedYear);
-              } /// and this code present selected year items using useState of setFilteredyear
+  // const filterChangeHandler = selectedItem => {
+  // setFilteredItem(selectedItem);
+ //} /// and this code present selected year items using useState of setFilteredyear
 
-              const filteredExpenses = props.items.filter(expenses => {
-                 return expenses.date.getFullYear().toString() === filteredYear 
-               }); // this props.items use for pass data to app.js and expense.js like this items={filteredExpenses}
-               
-               try{
-                return (
+// const filteredExpenses = props.items.filter(expenses => {
+//     console.log('get clicked', expenses);
+//   }
+// const HandleClick = () => {
+//   console.log('get clicked');
+// }
+
+  // return expenses.date.getFullYear().toString() === filteredYear 
+  // }); // this props.items use for pass data to app.js and expense.js like this items={filteredExpenses}
+
+    // const deleteItemHandler = () => {
+    //     // setDeleteText('(Deleted!)');
+
+    //     props.onDelete(props.title);
+    //     clickHandler();
+    //   };
+
+
+    return (
+            <ul className="expenses-list">
                 <li>
                 <Card className='expenses'>
-                <ExpensesFilter
-                onChangeFilter={filterChangeHandler}  // and this props fetech from  expensesfilter component props.onChangefilter  data
-                selected={filteredYear} 
-                />
-                <ExpensesChart expenses={filteredExpenses}/>
-                <ExpensesList items={filteredExpenses} />
+                  <ExpensesChart />  
+              {props.items.map((expenses) => (
+                <ExpensItems
+                key={expenses.id}
+                title={expenses.title}
+                amount={expenses.amount}
+                date={expenses.date}
+                />))}
                 </Card>
                 </li>
+                </ul>
                 );
-             }catch(e){
-                  console.log(e);
-             }
-            }
+          }
