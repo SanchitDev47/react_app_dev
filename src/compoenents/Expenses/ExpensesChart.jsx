@@ -18,10 +18,14 @@ export default function ExpensesChart(props) {
     {label: 'Dec', value: '0'},
 ];
 try{  
-for(const expense of props.expenses){
-    const expenseMonth = expense.date.getMonth();
-    chartDataPoints[expenseMonth].value += expense.amount; 
-} //this filter bas
+
+  for(const expense of props.expenses){
+    if(expense )
+  }
+// for(const expense of props.expenses){
+//     const expenseMonth = expense.date.getMonth();
+//     chartDataPoints[expenseMonth].value = expense.amount;
+// } //this filter bas
 return (
     <Chart dataPoints={chartDataPoints}/>
   )
